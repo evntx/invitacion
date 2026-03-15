@@ -14,13 +14,13 @@ $(document).ready(function() {
         music.pause();
     }
 
-    // Funciona en el sobre y en los botones
-    $('#envelope, #open').on('click touchstart', function(e) {
+    // CORRECCIÓN: Se eliminó 'touchstart' para evitar doble ejecución en móviles
+    $('#envelope, #open').on('click', function(e) {
         e.stopPropagation();
         openEnv();
     });
 
-    $('#reset').on('click touchstart', function(e) {
+    $('#reset').on('click', function(e) {
         e.stopPropagation();
         closeEnv();
     });
