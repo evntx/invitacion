@@ -1,108 +1,74 @@
 :root {
-    --color-env: #f08080; /* Color del sobre */
-    --color-flap: #e57373;
-    --color-bg: #ffebee;
-    --color-letter: #ffffff;
+    --rojo-xv: #b71c1c;
+    --dorado: #d4af37;
+    --color-env: #d32f2f; /* Rojo del sobre */
+    --color-flap: #b71c1c;
 }
 
 body {
-    background-color: var(--color-bg);
+    background: url('back-01.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .envlope-wrapper {
     height: 380px;
+    margin-top: -50px;
 }
 
 #envelope {
     position: relative;
-    width: 280px;
-    height: 180px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
+    width: 300px;
+    height: 200px;
     background-color: var(--color-env);
-    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     cursor: pointer;
 }
 
-.front {
-    position: absolute;
-    width: 0;
-    height: 0;
-    z-index: 10;
-}
-
-.flap {
-    border-left: 140px solid transparent;
-    border-right: 140px solid transparent;
-    border-bottom: 82px solid transparent;
-    border-top: 98px solid var(--color-flap);
-    transform-origin: top;
-    transition: transform 0.4s ease-in-out;
-}
-
-.pocket {
-    border-left: 140px solid var(--color-env);
-    border-right: 140px solid var(--color-env);
-    border-bottom: 90px solid var(--color-flap);
-    border-top: 90px solid transparent;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
+/* El papel que sale del sobre */
 .letter {
     position: absolute;
-    background-color: var(--color-letter);
-    width: 90%;
-    margin-left: 5%;
-    height: 90%;
+    background: #fff;
+    width: 94%;
+    margin-left: 3%;
+    height: 95%;
     top: 5%;
-    border-radius: 6px;
     z-index: 5;
-    transition: transform 0.4s 0.2s ease-in-out;
-    padding: 15px;
+    transition: transform 0.5s 0.3s ease;
+    padding: 10px;
     box-sizing: border-box;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+    overflow-y: auto; /* Permite scroll si el texto es mucho */
+    border: 2px solid var(--dorado);
 }
 
-/* Animaciones al abrir */
-.open.flap {
-    transform: rotateX(180deg);
-    z-index: 0;
-}
+/* Contenido de la carta */
+.letter-content { text-align: center; color: #333; }
+.name { font-family: 'Great Vibes', cursive; color: var(--rojo-xv); font-size: 2.2rem; margin: 5px 0; }
+.names-script { font-family: 'Great Vibes', cursive; color: var(--rojo-xv); font-size: 1.2rem; }
+.names-script-small { font-family: 'Great Vibes', cursive; color: var(--rojo-xv); font-size: 1rem; }
+.top-title { color: var(--rojo-xv); font-weight: bold; margin-bottom: 0; }
+.quote { font-size: 0.7rem; font-style: italic; margin: 10px 0; }
+.label { font-size: 0.6rem; letter-spacing: 2px; font-weight: bold; color: #777; }
+.label-red { font-size: 0.7rem; font-weight: bold; color: var(--rojo-xv); margin-bottom: 2px; }
+.date { font-size: 0.8rem; color: var(--rojo-xv); border-top: 1px solid var(--dorado); border-bottom: 1px solid var(--dorado); padding: 5px 0; }
+.info-grid { display: flex; justify-content: space-around; margin: 10px 0; border-bottom: 1px thin #eee; }
+.info-item { width: 45%; font-size: 0.6rem; }
+.time { font-weight: bold; font-size: 0.9rem; margin: 2px 0; }
+.small-text { font-size: 0.55rem; line-height: 1.2; }
+.footer { font-size: 0.7rem; color: var(--rojo-xv); font-weight: bold; margin-top: 15px; }
 
-.open.letter {
-    transform: translateY(-80px);
-    z-index: 20;
-}
+/* Animaciones de apertura */
+#envelope.open.flap { transform: rotateX(180deg); z-index: 0; }
+#envelope.open.letter { transform: translateY(-160px); height: 350px; z-index: 20; }
 
-.words {
-    color: #444;
-    font-size: 14px;
-    margin-top: 10px;
-}
+.front { position: absolute; width: 0; height: 0; z-index: 10; }
+.flap { border-left: 150px solid transparent; border-right: 150px solid transparent; border-bottom: 100px solid transparent; border-top: 110px solid var(--color-flap); transform-origin: top; transition: transform 0.4s ease; }
+.pocket { border-left: 150px solid var(--color-env); border-right: 150px solid var(--color-env); border-bottom: 100px solid var(--color-flap); border-top: 100px solid transparent; }
 
-.reset {
-    text-align: center;
-    margin-top: 50px;
-    position: absolute;
-    bottom: 10%;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--color-env);
-    color: white;
-    cursor: pointer;
-    margin: 5px;
-}
+.reset { position: absolute; bottom: 5%; width: 100%; text-align: center; }
+button { background: var(--rojo-xv); color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-family: 'Montserrat', sans-serif; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
