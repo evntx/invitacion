@@ -84,24 +84,23 @@ body {
 .countdown-number { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 7vw, 2.8rem); font-weight: 600; color: var(--color-dark); line-height: 1; }
 .countdown-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-top: 5px; font-weight: 600; }
 
-
 /* ================= RECUADROS Y MARCO COMPLETO ORNAMENTADO ================= */
 .info-card { 
     background: rgba(255, 255, 255, 0.92); 
     margin: 35px 0; 
-    padding: 55px 25px; /* Relleno amplio para evitar superponer el texto en las esquinas SVG */
+    padding: 55px 25px; /* Relleno amplio para evitar superponer texto en las esquinas */
     border-radius: 0; /* Un marco clásico tiene esquinas rectas */
     text-align: center; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
     position: relative; 
-    border: none; /* Quitamos el borde viejo */
+    border: none; 
 }
 
-/* LÍNEAS DEL MARCO (Doble línea dorada) */
+/* DOBLE LÍNEA DEL MARCO CONECTADA AL SVG */
 .frame-lines {
     position: absolute;
-    top: 15px; left: 15px; right: 15px; bottom: 15px;
-    border: 2px solid var(--dorado);
+    top: 11px; left: 11px; right: 11px; bottom: 11px;
+    border: 1.5px solid var(--dorado);
     pointer-events: none;
     z-index: 1;
 }
@@ -115,15 +114,17 @@ body {
 /* ESQUINAS SVG ORNAMENTADAS */
 .corner {
     position: absolute;
-    width: 100px; 
-    height: 100px;
+    width: 70px; /* Tamaño reducido para mayor elegancia y proporción */
+    height: 70px;
     z-index: 2;
     pointer-events: none;
 }
-.top-left { top: 0; left: 0; }
-.top-right { top: 0; right: 0; transform: scaleX(-1); }
-.bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
-.bottom-right { bottom: 0; right: 0; transform: scale(-1); }
+
+/* Alineación milimétrica para fusionarse con el CSS */
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; transform: scaleX(-1); }
+.bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
+.bottom-right { bottom: 10px; right: 10px; transform: scale(-1); }
 
 /* CONTENIDO SEGURO POR ENCIMA DEL MARCO */
 .card-content {
@@ -131,9 +132,11 @@ body {
     z-index: 3;
 }
 
-
 .names-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 8px; }
+
+/* TAMAÑO DE ICONOS AUMENTADO: */
 .icon-box { font-size: 3.5rem; color: var(--color-primary); margin-bottom: 20px; }
+
 .divider { height: 1px; background: radial-gradient(circle, var(--color-primary) 0%, transparent 100%); width: 70%; margin: 20px auto; opacity: 0.4; }
 
 /* Botones */
