@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* 100dvh soluciona problemas de altura con la barra de navegación en móviles */
+    min-height: 100dvh; 
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
@@ -52,7 +53,8 @@ body {
     opacity: 0; /* Invisible al estar cerrado */
 }
 
-#envelope.open.letter {
+/* CORRECCIÓN: Se agregó un espacio antes de .letter */
+#envelope.open .letter {
     transform: translateY(-150px);
     -webkit-transform: translateY(-150px);
     height: 360px;
@@ -86,7 +88,8 @@ body {
     z-index: 6;
 }
 
-#envelope.open.flap {
+/* CORRECCIÓN: Se agregó un espacio antes de .flap */
+#envelope.open .flap {
     transform: rotateX(180deg);
     -webkit-transform: rotateX(180deg);
     z-index: 0;
@@ -106,7 +109,9 @@ button { background: var(--rojo-xv); color: white; border: 1px solid var(--dorad
 /* AJUSTES MÓVIL */
 @media screen and (max-width: 480px) {
     #envelope { width: 260px; height: 170px; }
-  .flap { border-left-width: 130px; border-right-width: 130px; border-top-width: 90px; }
-  .pocket { border-left-width: 130px; border-right-width: 130px; border-bottom-width: 90px; }
-    #envelope.open.letter { transform: translateY(-120px); height: 320px; }
+    .flap { border-left-width: 130px; border-right-width: 130px; border-top-width: 90px; }
+    .pocket { border-left-width: 130px; border-right-width: 130px; border-bottom-width: 90px; }
+    
+    /* CORRECCIÓN: Se agregó el espacio aquí también */
+    #envelope.open .letter { transform: translateY(-120px); height: 320px; }
 }
