@@ -15,16 +15,26 @@
 <body>
     <svg style="display: none;">
         <symbol id="ornate-corner" viewBox="0 0 100 100">
-            <g fill="#d4af37">
-                <path d="M 15,75 C 5,70 0,55 5,35 C 10,15 25,0 50,5 C 70,10 85,25 80,45 C 75,55 60,60 50,50 C 40,40 45,25 55,20 C 40,20 25,30 20,50 C 15,60 20,70 15,75 Z" />
-                <path d="M 22,55 C 15,45 15,30 22,22 C 30,15 45,15 55,22 C 40,25 30,35 22,55 Z" />
-                <path d="M 50,12 C 65,5 85,10 95,20 C 85,25 75,15 65,18 C 55,20 50,15 50,12 Z" />
-                <path d="M 12,50 C 5,65 10,85 20,95 C 25,85 15,75 18,65 C 20,55 15,50 12,50 Z" />
-                <circle cx="35" cy="35" r="4" />
-                <circle cx="48" cy="28" r="2.5" />
-                <circle cx="28" cy="48" r="2.5" />
-                <circle cx="65" cy="32" r="1.5" />
-                <circle cx="32" cy="65" r="1.5" />
+            <g fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 2,35 L 2,2 L 35,2" stroke-width="2" />
+                <path d="M 10,40 L 10,10 L 40,10" stroke-width="1.2" />
+                
+                <g stroke-width="1.2">
+                    <path d="M 2,35 C 2,55 15,75 30,75 C 45,75 55,60 50,50 C 45,40 35,45 35,55 C 35,65 45,65 50,60" />
+                    <path d="M 35,2 C 55,2 75,15 75,30 C 75,45 60,55 50,50 C 40,45 45,35 55,35 C 65,35 65,45 60,50" />
+                    
+                    <path d="M 10,40 C 10,50 20,60 30,55 C 40,50 40,40 35,35 C 30,30 25,35 25,40" />
+                    <path d="M 40,10 C 50,10 60,20 55,30 C 50,40 40,40 35,35 C 30,30 35,25 40,25" />
+                    
+                    <path d="M 10,10 C 25,15 35,25 45,45" />
+                    <path d="M 14,14 C 22,5 35,0 45,2" />
+                    <path d="M 14,14 C 5,22 0,35 2,45" />
+                </g>
+
+                <circle cx="15" cy="15" r="1.2" fill="#d4af37" stroke="none" />
+                <circle cx="75" cy="18" r="0.8" fill="#d4af37" stroke="none" />
+                <circle cx="18" cy="75" r="0.8" fill="#d4af37" stroke="none" />
+                <circle cx="60" cy="60" r="1" fill="#d4af37" stroke="none" />
             </g>
         </symbol>
     </svg>
