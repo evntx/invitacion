@@ -14,10 +14,17 @@
 </head>
 <body>
     <svg style="display: none;">
-        <symbol id="corner-symbol" viewBox="0 0 100 100">
+        <symbol id="ornate-corner" viewBox="0 0 100 100">
             <g fill="#d4af37">
-                <path d="M 10,10 L 40,10 Q 50,20 40,30 L 20,30 Q 10,40 20,50 L 10,50 L 10,10 Z M 15,15 L 15,35 Q 20,40 25,35 L 25,20 Q 30,15 25,15 L 15,15 Z"/>
-                <path d="M 10,10 L 10,40 Q 20,50 30,40 L 30,20 Q 40,10 30,10 L 10,10 Z M 15,15 L 35,15 Q 40,20 35,25 L 20,25 Q 15,30 15,25 L 15,15 Z"/>
+                <path d="M 15,75 C 5,70 0,55 5,35 C 10,15 25,0 50,5 C 70,10 85,25 80,45 C 75,55 60,60 50,50 C 40,40 45,25 55,20 C 40,20 25,30 20,50 C 15,60 20,70 15,75 Z" />
+                <path d="M 22,55 C 15,45 15,30 22,22 C 30,15 45,15 55,22 C 40,25 30,35 22,55 Z" />
+                <path d="M 50,12 C 65,5 85,10 95,20 C 85,25 75,15 65,18 C 55,20 50,15 50,12 Z" />
+                <path d="M 12,50 C 5,65 10,85 20,95 C 25,85 15,75 18,65 C 20,55 15,50 12,50 Z" />
+                <circle cx="35" cy="35" r="4" />
+                <circle cx="48" cy="28" r="2.5" />
+                <circle cx="28" cy="48" r="2.5" />
+                <circle cx="65" cy="32" r="1.5" />
+                <circle cx="32" cy="65" r="1.5" />
             </g>
         </symbol>
     </svg>
@@ -52,31 +59,37 @@
             </div>
 
             <div class="info-card fade-up">
-                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+                <div class="frame-lines"></div>
+                <svg class="corner top-left"><use href="#ornate-corner"></use></svg>
+                <svg class="corner top-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-left"><use href="#ornate-corner"></use></svg>
 
-                <p style="font-style: italic; font-size: 1.25rem; margin: 0; line-height: 1.6;">
-                    "Anhelé tanto este día, para dar gracias a Dios por todo lo que me ha dado y lo amada que me siento por Él, y quiero compartirlo con Ustedes."
-                </p>
+                <div class="card-content">
+                    <p style="font-style: italic; font-size: 1.25rem; margin: 0; line-height: 1.6;">
+                        "Anhelé tanto este día, para dar gracias a Dios por todo lo que me ha dado y lo amada que me siento por Él, y quiero compartirlo con Ustedes."
+                    </p>
+                </div>
             </div>
 
             <div class="info-card fade-up">
-                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+                <div class="frame-lines"></div>
+                <svg class="corner top-left"><use href="#ornate-corner"></use></svg>
+                <svg class="corner top-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-left"><use href="#ornate-corner"></use></svg>
 
-                <h3 class="section-title">Mis Padres</h3>
-                <div class="names-text">Cesar Gallo López</div>
-                <div class="names-text">Ana Teresa Ocegueda</div>
-                
-                <div class="divider"></div>
-                
-                <h3 class="section-title">Mis Padrinos</h3>
-                <div class="names-text">Hector Guzmán</div>
-                <div class="names-text">Paola Hernández</div>
+                <div class="card-content">
+                    <h3 class="section-title">Mis Padres</h3>
+                    <div class="names-text">Cesar Gallo López</div>
+                    <div class="names-text">Ana Teresa Ocegueda</div>
+                    
+                    <div class="divider"></div>
+                    
+                    <h3 class="section-title">Mis Padrinos</h3>
+                    <div class="names-text">Hector Guzmán</div>
+                    <div class="names-text">Paola Hernández</div>
+                </div>
             </div>
 
             <div style="text-align: center; margin: 40px 0;" class="fade-up">
@@ -114,56 +127,67 @@
             </div>
 
             <div class="info-card fade-up">
-                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+                <div class="frame-lines"></div>
+                <svg class="corner top-left"><use href="#ornate-corner"></use></svg>
+                <svg class="corner top-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-left"><use href="#ornate-corner"></use></svg>
 
-                <div class="icon-box"><i class="fas fa-church"></i></div>
-                <h3 class="section-title">Acción de Gracias</h3>
-                <p style="color: var(--color-primary); font-weight: 700; font-size: 1.4rem; margin-bottom: 5px;">6:00 PM</p>
-                <p style="font-size: 1.25rem; font-weight: 500; margin-bottom: 20px;">
-                    Berlín 102 Versalles<br>Auditorio del IMSS
-                </p>
-                
-                <div class="divider" style="margin: 25px auto; width: 60%;"></div>
+                <div class="card-content">
+                    <div class="icon-box"><i class="fas fa-church"></i></div>
+                    <h3 class="section-title">Acción de Gracias</h3>
+                    <p style="color: var(--color-primary); font-weight: 700; font-size: 1.4rem; margin-bottom: 5px;">6:00 PM</p>
+                    <p style="font-size: 1.25rem; font-weight: 500; margin-bottom: 20px;">
+                        Berlín 102 Versalles<br>Auditorio del IMSS
+                    </p>
+                    
+                    <div class="divider" style="margin: 25px auto; width: 60%;"></div>
 
-                <div class="icon-box"><i class="fas fa-glass-cheers"></i></div>
-                <h3 class="section-title">Recepción</h3>
-                <p style="color: var(--color-primary); font-weight: 700; font-size: 1.4rem; margin-bottom: 15px;">8:00 PM</p>
-                
-                <a href="http://googleusercontent.com/https://maps.app.goo.gl/Niq5JR3815vtuUHC8" target="_blank" class="btn-custom">
-                    Ver Ubicación
-                </a>
-            </div>
-            <div class="info-card fade-up">
-                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
-
-                <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
-                <h3 class="section-title">Lluvia de Sobres</h3>
-                <p style="font-size: 1.15rem; line-height: 1.5;">
-                    Mi mejor regalo es su presencia, pero si deseas obsequiarme algo, agradecería fuera en efectivo.
-                </p>
+                    <div class="icon-box"><i class="fas fa-glass-cheers"></i></div>
+                    <h3 class="section-title">Recepción</h3>
+                    <p style="color: var(--color-primary); font-weight: 700; font-size: 1.4rem; margin-bottom: 15px;">8:00 PM</p>
+                    
+                    <a href="https://maps.app.goo.gl/Niq5JR3815vtuUHC8" target="_blank" class="btn-custom">
+                        Ver Ubicación
+                    </a>
+                </div>
             </div>
 
             <div class="info-card fade-up">
-                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
-                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+                <div class="frame-lines"></div>
+                <svg class="corner top-left"><use href="#ornate-corner"></use></svg>
+                <svg class="corner top-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-left"><use href="#ornate-corner"></use></svg>
 
-                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
-                <h3 class="section-title">Confirmar Asistencia</h3>
-                <p style="font-size: 1.15rem; margin-bottom: 20px;">
-                    Por favor, confirma tu asistencia con nosotros al 311 182 56 28.
-                </p>
-                <a href="https://wa.me/523111825628?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20María%20José" target="_blank" class="btn-custom">
-                    Enviar Mensaje
-                </a>
+                <div class="card-content">
+                    <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3 class="section-title">Lluvia de Sobres</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.5;">
+                        Mi mejor regalo es su presencia, pero si deseas obsequiarme algo, agradecería fuera en efectivo.
+                    </p>
+                </div>
             </div>
+
+            <div class="info-card fade-up">
+                <div class="frame-lines"></div>
+                <svg class="corner top-left"><use href="#ornate-corner"></use></svg>
+                <svg class="corner top-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-right"><use href="#ornate-corner"></use></svg>
+                <svg class="corner bottom-left"><use href="#ornate-corner"></use></svg>
+
+                <div class="card-content">
+                    <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                    <h3 class="section-title">Confirmar Asistencia</h3>
+                    <p style="font-size: 1.15rem; margin-bottom: 20px;">
+                        Por favor, confirma tu asistencia con nosotros al 311 182 56 28.
+                    </p>
+                    <a href="https://wa.me/523111825628?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20María%20José" target="_blank" class="btn-custom">
+                        Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+
             <div style="text-align: center; margin-top: 50px;" class="fade-up">
                 <p class="main-title" style="font-size: clamp(3rem, 10vw, 4rem);">¡Los espero!</p>
                 <p style="font-size: 1rem; color: #777; margin-top: 20px;">Puerto Vallarta, Mayo del 2026</p>
