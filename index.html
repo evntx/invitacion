@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <svg style="display: none;">
+        <symbol id="corner-symbol" viewBox="0 0 100 100">
+            <g fill="#d4af37">
+                <path d="M 5,5 L 20,5 Q 25,10 20,15 L 10,15 Q 5,20 10,25 L 5,25 Z"/>
+                <path d="M 5,5 L 5,20 Q 10,25 15,20 L 15,10 Q 20,5 15,5 L 5,5 Z"/>
+            </g>
+        </symbol>
+    </svg>
     <audio id="musica" loop preload="auto">
         <source src="instrumental.mp3" type="audio/mpeg">
     </audio>
@@ -44,12 +52,22 @@
             </div>
 
             <div class="info-card fade-up">
+                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+
                 <p style="font-style: italic; font-size: 1.25rem; margin: 0; line-height: 1.6;">
                     "Anhelé tanto este día, para dar gracias a Dios por todo lo que me ha dado y lo amada que me siento por Él, y quiero compartirlo con Ustedes."
                 </p>
             </div>
 
             <div class="info-card fade-up">
+                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+
                 <h3 class="section-title">Mis Padres</h3>
                 <div class="names-text">Cesar Gallo López</div>
                 <div class="names-text">Ana Teresa Ocegueda</div>
@@ -96,6 +114,11 @@
             </div>
 
             <div class="info-card fade-up">
+                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+
                 <div class="icon-box"><i class="fas fa-church"></i></div>
                 <h3 class="section-title">Acción de Gracias</h3>
                 <p style="color: var(--color-primary); font-weight: 700; font-size: 1.4rem; margin-bottom: 5px;">6:00 PM</p>
@@ -114,6 +137,11 @@
                 </a>
             </div>
             <div class="info-card fade-up">
+                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+
                 <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
                 <h3 class="section-title">Lluvia de Sobres</h3>
                 <p style="font-size: 1.15rem; line-height: 1.5;">
@@ -122,10 +150,15 @@
             </div>
 
             <div class="info-card fade-up">
+                <svg class="corner-decor top-left"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor top-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-right"><use href="#corner-symbol"></use></svg>
+                <svg class="corner-decor bottom-left"><use href="#corner-symbol"></use></svg>
+
                 <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
                 <h3 class="section-title">Confirmar Asistencia</h3>
                 <p style="font-size: 1.15rem; margin-bottom: 20px;">
-                    Por favor, confirma tu asistencia con nosotros.
+                    Por favor, confirma tu asistencia con nosotros al 311 182 56 28.
                 </p>
                 <a href="https://wa.me/523111825628?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20María%20José" target="_blank" class="btn-custom">
                     Enviar Mensaje
