@@ -84,35 +84,59 @@ body {
 .countdown-number { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 7vw, 2.8rem); font-weight: 600; color: var(--color-dark); line-height: 1; }
 .countdown-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-top: 5px; font-weight: 600; }
 
-/* ================= RECUADROS DE INFORMACIÓN CON ESQUINAS ================= */
+
+/* ================= RECUADROS Y MARCO COMPLETO ORNAMENTADO ================= */
 .info-card { 
-    background: rgba(255,255,255,0.85); 
-    margin: 25px 0; 
-    padding: 30px 20px; 
-    border-radius: 15px; 
+    background: rgba(255, 255, 255, 0.92); 
+    margin: 35px 0; 
+    padding: 55px 25px; /* Relleno amplio para evitar superponer el texto en las esquinas SVG */
+    border-radius: 0; /* Un marco clásico tiene esquinas rectas */
     text-align: center; 
-    border: 1px solid var(--dorado); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-    position: relative; /* Clave para colocar las esquinas decorativas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
+    position: relative; 
+    border: none; /* Quitamos el borde viejo */
 }
 
-/* ESTILO DE ESQUINA ORNAMENTAL (SVG) */
-.corner-decor {
+/* LÍNEAS DEL MARCO (Doble línea dorada) */
+.frame-lines {
     position: absolute;
-    width: 25px; /* Tamaño de la esquina decorativa */
-    height: 25px;
+    top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: 2px solid var(--dorado);
+    pointer-events: none;
     z-index: 1;
 }
-.top-left { top: 10px; left: 10px; }
-.top-right { top: 10px; right: 10px; transform: scaleX(-1); } /* Inversión horizontal */
-.bottom-right { bottom: 10px; right: 10px; transform: scale(-1); } /* Inversión completa */
-.bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); } /* Inversión vertical */
+.frame-lines::after {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid var(--dorado);
+}
+
+/* ESQUINAS SVG ORNAMENTADAS */
+.corner {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; transform: scaleX(-1); }
+.bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
+.bottom-right { bottom: 0; right: 0; transform: scale(-1); }
+
+/* CONTENIDO SEGURO POR ENCIMA DEL MARCO */
+.card-content {
+    position: relative;
+    z-index: 3;
+}
+
 
 .names-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 8px; }
-.icon-box { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 15px; }
+.icon-box { font-size: 3.5rem; color: var(--color-primary); margin-bottom: 20px; }
 .divider { height: 1px; background: radial-gradient(circle, var(--color-primary) 0%, transparent 100%); width: 70%; margin: 20px auto; opacity: 0.4; }
 
-/* Botones más grandes */
+/* Botones */
 .btn-custom { background-color: var(--color-primary); color: white !important; border-radius: 50px; padding: 15px 35px; border: none; transition: all 0.3s; margin-top: 15px; text-decoration: none; display: inline-block; box-shadow: 0 4px 10px rgba(183, 28, 28, 0.3); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; border: 1px solid var(--dorado); }
 .btn-custom:hover { transform: translateY(-2px); background-color: var(--color-flap); box-shadow: 0 6px 15px rgba(183, 28, 28, 0.4); }
 
