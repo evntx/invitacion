@@ -4,19 +4,27 @@ $(document).ready(function() {
     var btn_reset = $("#reset");
     var music = document.getElementById("musica");
 
-    function open() {
+    function openEnv() {
         envelope.addClass("open").removeClass("close");
-        music.play().catch(function(error) {
-            console.log("El navegador bloqueó el inicio automático hasta que el usuario interactúe.");
-        });
+        // En móviles, el audio solo inicia tras un toque del usuario
+        music.play();
     }
 
-    function close() {
+    function closeEnv() {
         envelope.addClass("close").removeClass("open");
         music.pause();
     }
 
-    envelope.click(open);
-    btn_open.click(open);
-    btn_reset.click(close);
+    // Soporta clic y toque táctil
+    envelope.on('click touchstart', function(e) {
+        openEnv();
+    });
+
+    btn_open.on('click touchstart', function(e) {
+        openEnv();
+    });
+
+    btn_reset.on('click touchstart', function(e) {
+        closeEnv();
+    });
 });
