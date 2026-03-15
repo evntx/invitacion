@@ -1,0 +1,108 @@
+:root {
+    --color-env: #f08080; /* Color del sobre */
+    --color-flap: #e57373;
+    --color-bg: #ffebee;
+    --color-letter: #ffffff;
+}
+
+body {
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.envlope-wrapper {
+    height: 380px;
+}
+
+#envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    background-color: var(--color-env);
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.flap {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 82px solid transparent;
+    border-top: 98px solid var(--color-flap);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+}
+
+.pocket {
+    border-left: 140px solid var(--color-env);
+    border-right: 140px solid var(--color-env);
+    border-bottom: 90px solid var(--color-flap);
+    border-top: 90px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.letter {
+    position: absolute;
+    background-color: var(--color-letter);
+    width: 90%;
+    margin-left: 5%;
+    height: 90%;
+    top: 5%;
+    border-radius: 6px;
+    z-index: 5;
+    transition: transform 0.4s 0.2s ease-in-out;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Animaciones al abrir */
+.open.flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.open.letter {
+    transform: translateY(-80px);
+    z-index: 20;
+}
+
+.words {
+    color: #444;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.reset {
+    text-align: center;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 10%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-env);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
