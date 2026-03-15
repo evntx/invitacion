@@ -29,6 +29,20 @@ $(document).ready(function() {
         openEnv();
     });
 
+    // ================= CONTROL DE MÚSICA EN SEGUNDO PLANO =================
+    // Detecta si el usuario minimiza el navegador, cambia de pestaña o apaga la pantalla
+    $(document).on("visibilitychange", function() {
+        if (document.hidden) {
+            // Si la página se oculta, pausar la música
+            music.pause();
+        } else {
+            // Si regresa y la invitación ya estaba abierta, reanudar
+            if (envelope.hasClass("open")) {
+                music.play().catch(e => console.log("Se requiere interacción para reanudar el audio"));
+            }
+        }
+    });
+
     // ================= LÓGICA DE CUENTA REGRESIVA =================
     const eventDate = new Date(2026, 4, 15, 18, 0, 0).getTime();
 
