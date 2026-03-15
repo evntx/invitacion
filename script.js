@@ -5,15 +5,12 @@ $(document).ready(function() {
     const music = document.getElementById("musica");
 
     function openEnv() {
-        // Abre el sobre
         envelope.removeClass("close").addClass("open");
 
-        // Reproduce música automáticamente (sin interfaz visual)
         if (music.paused) {
             music.play().catch(e => console.log("Audio interact required"));
         }
 
-        // Transición a pantalla completa
         setTimeout(function() {
             envScreen.css('opacity', '0');
             
@@ -27,14 +24,12 @@ $(document).ready(function() {
         }, 1500); 
     }
 
-    // Funciona tocando la carta o el botón
     $('#envelope, #open-btn').on('click', function(e) {
         e.stopPropagation();
         openEnv();
     });
 
     // ================= LÓGICA DE CUENTA REGRESIVA =================
-    // Fecha del evento: 15 de Mayo de 2026, 6:00 PM
     const eventDate = new Date(2026, 4, 15, 18, 0, 0).getTime();
 
     const countdownInterval = setInterval(function() {
