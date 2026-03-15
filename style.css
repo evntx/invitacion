@@ -93,25 +93,23 @@ body {
     text-align: center; 
     border: 1px solid var(--dorado); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-    position: relative; 
+    position: relative; /* Clave para colocar las esquinas decorativas */
 }
 
-/* ESTILO DE ESQUINA DECORATIVA */
+/* ESTILO DE ESQUINA ORNAMENTAL (SVG) */
 .corner-decor {
     position: absolute;
-    width: 25px; 
+    width: 25px; /* Tamaño de la esquina decorativa */
     height: 25px;
+    z-index: 1;
 }
 .top-left { top: 10px; left: 10px; }
-.top-right { top: 10px; right: 10px; transform: scaleX(-1); }
-.bottom-right { bottom: 10px; right: 10px; transform: scale(-1); }
-.bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
+.top-right { top: 10px; right: 10px; transform: scaleX(-1); } /* Inversión horizontal */
+.bottom-right { bottom: 10px; right: 10px; transform: scale(-1); } /* Inversión completa */
+.bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); } /* Inversión vertical */
 
 .names-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 8px; }
-
-/* TAMAÑO DE ICONOS AUMENTADO AQUÍ: */
-.icon-box { font-size: 3.5rem; color: var(--color-primary); margin-bottom: 20px; }
-
+.icon-box { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 15px; }
 .divider { height: 1px; background: radial-gradient(circle, var(--color-primary) 0%, transparent 100%); width: 70%; margin: 20px auto; opacity: 0.4; }
 
 /* Botones más grandes */
