@@ -93,13 +93,13 @@ body {
     text-align: center; 
     border: 1px solid var(--dorado); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-    position: relative; /* Clave para colocar las esquinas decorativas */
+    position: relative; 
 }
 
 /* ESTILO DE ESQUINA DECORATIVA */
 .corner-decor {
     position: absolute;
-    width: 25px; /* Tamaño de la esquina decorativa */
+    width: 25px; 
     height: 25px;
 }
 .top-left { top: 10px; left: 10px; }
@@ -108,7 +108,10 @@ body {
 .bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
 
 .names-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 8px; }
-.icon-box { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 15px; }
+
+/* TAMAÑO DE ICONOS AUMENTADO AQUÍ: */
+.icon-box { font-size: 3.5rem; color: var(--color-primary); margin-bottom: 20px; }
+
 .divider { height: 1px; background: radial-gradient(circle, var(--color-primary) 0%, transparent 100%); width: 70%; margin: 20px auto; opacity: 0.4; }
 
 /* Botones más grandes */
